@@ -1,0 +1,16 @@
+{
+  "name": "nicks-cafe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "tailwindcss -i ./src/styles/app.css -o ./styles.css --minify",
+    "dev": "npm run build && python -m http.server 4173",
+    "start": "npm run build && python -m http.server 4173",
+    "test": "node --test --test-isolation=none"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
